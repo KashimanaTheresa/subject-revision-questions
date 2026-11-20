@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Subject Revision Quest - Make learning an adventure."
+    />
+    <title>Subject Revision Quest | Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- JavaScript -->
+    <script src="js/app.js" defer></script>
+  </head>
+
+  <body>
+    <div class="app-container">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="images/logo.png" alt="Revision Quest Logo" />
+          <h1>Revision Quest</h1>
+        </div>
+
+        <nav class="sidebar-navigation" aria-label="Main navigation">
+
+          <button class="nav-link active" type="button" data-view="dashboard">
+             Dashboard
+          </button>
+
+          <button class="nav-link" type="button" data-view="topics">
+             Topic Map
+          </button>
+
+          <button class="nav-link" type="button" data-view="challenges">
+             Challenges
+          </button>
+
+          <button class="nav-link" type="button" data-view="rewards">
+            Rewards
+          </button>
+
+          <button class="nav-link" type="button" data-view="performance">
+             Performance
+          </button>
+
+          <p class="nav-heading">PREFERENCES</p>
+
+          <button class="nav-link" type="button" data-view="settings">
+             Settings
+          </button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p>Keep learning. Keep growing.</p>
+          <span>© 2026 Revision Quest</span>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <!-- TOP HEADER -->
+        <header class="top-header">
+          <div class="header-title">
+            <h2>Dashboard</h2>
+            <p>Your learning journey starts here.</p>
+          </div>
+
+          
+<div class="user-profile">
+
+    <button class="notification-icon" type="button"
+            aria-label="Notifications">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M18 9A6 6 0 0 0 6 9C6 16 3 16 3 18H21C21 16 18 16 18 9Z"
+            stroke="currentColor" stroke-width="1.7"
+            stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 21H14" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round"/>
+        </svg>
+        <span class="notification-dot"></span>
+    </button>
+
+    <div class="user-avatar" role="img" aria-label="Questling profile avatar">
+              <svg
+                viewBox="0 0 100 100"
+                role="img"
+                aria-label="Questling mascot"
+              >
+                <path d="M25 35 Q12 10 37 25 L40 37" fill="#A895DB" />
+                <path d="M75 35 Q88 10 63 25 L60 37" fill="#A895DB" />
+
+                <ellipse cx="50" cy="52" rx="34" ry="35" fill="#9176CC" />
+
+                <ellipse cx="38" cy="49" rx="5" ry="7" fill="#29233D" />
+                <ellipse cx="62" cy="49" rx="5" ry="7" fill="#29233D" />
+
+                <path
+                  d="M43 65 Q50 71 57 65"
+                  fill="none"
+                  stroke="#29233D"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+
+                <ellipse cx="50" cy="91" rx="23" ry="8" fill="#765DB1" />
+              </svg>
+            
+    </div>
+
+    <div class="user-details">
+        <h3>Kashimana Nor</h3>
+        <span>Computer Science</span>
+    </div>
+
+</div>
+
+        </header>
+
+        <!-- DASHBOARD VIEW -->
+        <section class="page-section" id="dashboard">
+          <!-- WELCOME SECTION -->
+
+          <section class="welcome-banner">
+            <div class="welcome-character">
+              <svg
+                viewBox="0 0 100 100"
+                role="img"
+                aria-label="Questling mascot"
+              >
+                <path d="M25 35 Q12 10 37 25 L40 37" fill="#A895DB" />
+                <path d="M75 35 Q88 10 63 25 L60 37" fill="#A895DB" />
+
+                <ellipse cx="50" cy="52" rx="34" ry="35" fill="#9176CC" />
+
+                <ellipse cx="38" cy="49" rx="5" ry="7" fill="#29233D" />
+                <ellipse cx="62" cy="49" rx="5" ry="7" fill="#29233D" />
+
+                <path
+                  d="M43 65 Q50 71 57 65"
+                  fill="none"
+                  stroke="#29233D"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+
+                <ellipse cx="50" cy="91" rx="23" ry="8" fill="#765DB1" />
+              </svg>
+            </div>
+
+            <div class="welcome-copy">
+              <span class="welcome-eyebrow">YOUR LEARNING JOURNEY</span>
+              <h2>Welcome back, <span id="welcome-name">Learner</span></h2>
+              <p>Ready to continue your Computer Science revision?</p>
+            </div>
+          </section>
+
+          <!-- DASHBOARD STATISTICS -->
+          <section class="statistics-section" aria-label="Learning statistics">
+            <article class="stat-card">
+              <div class="stat-card-top">
+                <span class="stat-label">Total Points</span>
+                <div class="stat-icon points-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 3L14.8 8.7L21 9.6L16.5 14L17.6 20.2L12 17.3L6.4 20.2L7.5 14L3 9.6L9.2 8.7L12 3Z"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <h3 id="total-points">0</h3>
+              <span class="stat-caption">Keep earning points!</span>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-card-top">
+                <span class="stat-label">Topics Completed</span>
+                <div class="stat-icon topics-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20V18H6.5A2.5 2.5 0 0 0 4 20.5V5.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4 5.5V20.5M8 7H16M8 11H15"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <h3 id="completed-topics">0/8</h3>
+              <span class="stat-caption">Your learning progress</span>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-card-top">
+                <span class="stat-label">Accuracy</span>
+                <div class="stat-icon accuracy-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="9"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    />
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="4"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    />
+                    <path
+                      d="M12 12L19 5"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <h3 id="accuracy">0%</h3>
+              <span class="stat-caption">Keep practising!</span>
+            </article>
+          </section>
+
+          <!-- LEARNING PROGRESS -->
+          <section class="learning-section">
+            <div class="section-heading">
+              <div>
+                <h2>Continue Learning</h2>
+                <p>Pick up where you left off.</p>
+              </div>
+
+              <button class="text-button" type="button" data-view="topics">
+                <span>View all topics</span>
+                <span class="button-arrow" aria-hidden="true">→</span>
+              </button>
+            </div>
+
+            <article class="learning-card">
+
+              <div class="learning-details">
+                <span class="category-label">COMPUTER SCIENCE</span>
+
+                <h3>Introduction to Computer Science</h3>
+
+                <p>Explore the fundamentals of computing.</p>
+
+                <div class="progress-information">
+                  <span>Progress</span>
+                  <span id="learning-progress-text">0%</span>
+                </div>
+
+                <progress id="learning-progress" value="0" max="100">
+                  0%
+                </progress>
+              </div>
+
+              <button
+                class="primary-button"
+                type="button"
+                data-view="challenges"
+              >
+                Start Challenge
+              </button>
+            </article>
+          </section>
+
+          <!-- ACHIEVEMENTS -->
+          <section class="achievements-section">
+            <div class="achievements-heading">
+              <div>
+                <h2>Recent Achievements</h2>
+                <p>Celebrate your learning milestones.</p>
+              </div>
+
+              <button class="text-button" type="button" data-view="rewards">
+                View all →
+              </button>
+            </div>
+
+            <div class="achievement-list">
+              <article class="achievement-card">
+                <div class="achievement-icon first-steps-icon">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M12 3L14.8 8.7L21 9.6L16.5 14L17.6 20.2L12 17.3L6.4 20.2L7.5 14L3 9.6L9.2 8.7L12 3Z"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                <div class="achievement-details">
+                  <h3>First Steps</h3>
+                  <p>Complete your first challenge.</p>
+                  <span class="achievement-status">Not unlocked</span>
+                </div>
+              </article>
+
+              <article class="achievement-card">
+                <div class="achievement-icon quick-learner-icon">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M13 2L5 13H11L10 22L19 10H13L13 2Z"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                <div class="achievement-details">
+                  <h3>Quick Learner</h3>
+                  <p>Earn 100 learning points.</p>
+                  <span class="achievement-status">Not unlocked</span>
+                </div>
+              </article>
+
+              <article class="achievement-card">
+                <div class="achievement-icon consistency-icon">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M12 22C7.5 22 4 18.8 4 14.5C4 11.4 6 9 8 7C8 10 10 11 11 11.5C11 7.5 14 4 16 2C16 6 20 9.5 20 14.5C20 18.8 16.5 22 12 22Z"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                <div class="achievement-details">
+                  <h3>Streak</h3>
+                  <p>Complete challenges on 3 days.</p>
+                  <span class="achievement-status">Not unlocked</span>
+                </div>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        
+
+        <!-- CHALLENGES VIEW -->
+        <section class="page-section" id="challenges" hidden>
+          <h2>Practice Challenges</h2>
+          <p>Test your knowledge and earn points.</p>
+          <div id="quiz-container"></div>
+        </section>
+
+        <!-- REWARDS VIEW -->
+        <section class="page-section" id="rewards" hidden>
+          <h2>My Rewards</h2>
+          <p>Track your achievements and milestones.</p>
+          <div id="rewards-container"></div>
+        </section>
+
+        <!-- PERFORMANCE VIEW -->
+        <section class="page-section" id="performance" hidden>
+          <h2>My Performance</h2>
+          <p>See how far you've come in your learning journey.</p>
+          <div id="performance-container"></div>
+        </section>
+
+        <!-- SETTINGS VIEW -->
+        <section class="page-section" id="settings" hidden>
+          <h2>Settings</h2>
+          <p>Manage your learning preferences.</p>
+          <button type="button" id="reset-progress">Reset Progress</button>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
