@@ -1,6 +1,368 @@
-<!-- TOPIC MAP VIEW -->
-        <section class="page-section" id="topics" hidden>
-          <h2>Topic Map</h2>
-          <p>Explore your Computer Science revision topics.</p>
-          <div id="topic-list"></div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Subject Revision Quest - Make learning an adventure."
+    />
+    <title>Subject Revision Quest | Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- JavaScript -->
+    <script src="javascript/app.js" defer></script>
+  </head>
+
+  <body>
+    <div class="app-container">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="img/logo.jpg" alt="Revision Quest" />
+          <h1>Revision <span>Quest</span></h1>
+        </div>
+
+        <nav class="sidebar-navigation" aria-label="Main navigation">
+          <a href="index.html" class="nav-link"> Dashboard </a>
+
+          <a href="topics.html" class="nav-link active"> Topic Map </a>
+
+          <a href="challenges.html" class="nav-link"> Challenges </a>
+
+          <a href="rewards.html" class="nav-link"> Rewards </a>
+
+          <a href="performance.html" class="nav-link"> Performance </a>
+
+          <p class="nav-heading">PREFERENCES</p>
+
+          <a href="settings.html" class="nav-link"> Settings </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p>Keep learning. Keep growing.</p>
+          <span>© 2026 Revision Quest</span>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <!-- Topic Map Heading -->
+        <section class="topic-map-header">
+          <div>
+            <p class="eyebrow">YOUR LEARNING PATH</p>
+            <h2>Frontend Development</h2>
+            <p>Build your skills one lesson at a time. Keep moving forward!</p>
+          </div>
+
+          <div class="course-progress">
+            <span>Course Progress</span>
+            <strong>20%</strong>
+            <div class="progress-track">
+              <div class="progress-fill" style="width: 20%"></div>
+            </div>
+          </div>
         </section>
+
+        <!-- LEARNING AREA -->
+        <section class="learning-area" id="learningArea" hidden>
+          <div class="learning-area-header">
+            <div>
+              <p class="eyebrow">YOUR CURRENT LESSON</p>
+              <h2 id="lessonTitle">HTML Document Structure</h2>
+            </div>
+
+            <button type="button" id="closeLesson">Back to Topic Map</button>
+          </div>
+
+          <!-- VIDEO SECTION -->
+          <div class="activity-section">
+            <h3>1. Watch and Learn</h3>
+            <div class="video-container" id="videoContainer">
+              <p>Your lesson video will appear here.</p>
+            </div>
+          </div>
+
+          <!-- CODING SECTION -->
+
+          <div class="activity-section">
+            <h3>2. Coding Practice</h3>
+
+            <div class="exercise-instructions">
+              <h4>Your Challenge</h4>
+              <p>Create a simple HTML page containing:</p>
+              <ul>
+                <li>A heading that says "Welcome to My Website".</li>
+                <li>A paragraph that says "I am learning web development".</li>
+                <li>A link to https://www.google.com.</li>
+              </ul>
+            </div>
+
+            <label for="codeEditor">Write your HTML code below:</label>
+
+            <textarea
+              id="codeEditor"
+              placeholder="Write your HTML code here..."
+              rows="12"
+              spellcheck="false"
+            >
+            </textarea>
+
+            <button type="button" id="submitCode">Submit Code</button>
+
+            <div id="codeFeedback" aria-live="polite"></div>
+          </div>
+
+          <!-- QUIZ SECTION -->
+          <div class="activity-section">
+            <h3>3. Test Your Knowledge</h3>
+            <div id="quizContainer">
+              <p>Your lesson quiz will appear here.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Topic Map -->
+        <section class="topic-map-section">
+          <!-- Week 1 -->
+          <div class="week-section">
+            <div class="week-heading">
+              <span>WEEK 01</span>
+              <h3>HTML Fundamentals</h3>
+              <p>Learn the building blocks of the web.</p>
+            </div>
+
+            <div class="lesson-path">
+              <div
+                class="lesson-node completed"
+                data-topic-id="introduction-to-web-development"
+                role="button"
+                tabindex="0"
+              >
+                <div class="lesson-circle">✓</div>
+                <div class="lesson-info">
+                  <h4>Introduction to Web Development</h4>
+                  <span>Completed</span>
+                </div>
+              </div>
+
+              <div
+                class="lesson-node available"
+                data-topic-id="html-document-structure"
+                role="button"
+                tabindex="0"
+              >
+                <div class="lesson-circle">▶</div>
+                <div class="lesson-info">
+                  <h4>HTML Document Structure</h4>
+                  <span>Ready to start</span>
+                </div>
+              </div>
+
+              <div
+                class="lesson-node locked"
+                data-topic-id="headings-paragraphs-and-links"
+                role="button"
+                tabindex="0"
+              >
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Headings, Paragraphs and Links</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+
+              <div
+                class="lesson-node locked"
+                data-topic-id="images-lists-tables"
+                role="button"
+                tabindex="0"
+              >
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Images, Lists and Tables</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+
+              <div
+                class="lesson-node locked"
+                data-topic-id="forms-semantic-html"
+                role="button"
+                tabindex="0"
+              >
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Forms and Semantic HTML</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Week 2 -->
+          <div class="week-section">
+            <div class="week-heading">
+              <span>WEEK 02</span>
+              <h3>CSS Fundamentals</h3>
+              <p>Bring your web pages to life with styling.</p>
+            </div>
+
+            <div class="lesson-path">
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Introduction to CSS</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Selectors and Properties</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Colours, Typography and Backgrounds</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>The CSS Box Model</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Flexbox, Grid and Responsive Design</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Week 3 -->
+          <div class="week-section">
+            <div class="week-heading">
+              <span>WEEK 03</span>
+              <h3>JavaScript Fundamentals</h3>
+              <p>Start making your websites interactive.</p>
+            </div>
+
+            <div class="lesson-path">
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Variables and Data Types</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Operators and Expressions</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Conditionals and Loops</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Functions</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>DOM Manipulation and Events</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Week 4 -->
+          <div class="week-section">
+            <div class="week-heading">
+              <span>WEEK 04</span>
+              <h3>Practical Development</h3>
+              <p>Put everything you've learned into practice.</p>
+            </div>
+
+            <div class="lesson-path">
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Connecting HTML, CSS and JavaScript</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Building Interactive Components</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Form Validation</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Git and GitHub Basics</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+
+              <div class="lesson-node locked">
+                <div class="lesson-circle">🔒</div>
+                <div class="lesson-info">
+                  <h4>Final Responsive Website Project</h4>
+                  <span>Locked</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

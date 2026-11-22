@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- JavaScript -->
-    <script src="js/app.js" defer></script>
+    <script src="javascript/app.js" defer></script>
   </head>
 
   <body>
@@ -29,37 +29,24 @@
       <!-- SIDEBAR -->
       <aside class="sidebar">
         <div class="logo">
-          <img src="img/logo.jpg" alt="Revision Quest Logo" />
-          <h1>Revision Quest</h1>
+          <img src="img/logo.jpg" alt="Revision Quest" />
+          <h1>Revision <span>Quest</span></h1>
         </div>
 
         <nav class="sidebar-navigation" aria-label="Main navigation">
+          <a href="index.html" class="nav-link active"> Dashboard </a>
 
-          <button class="nav-link active" type="button" data-view="dashboard">
-             Dashboard
-          </button>
+          <a href="topics.html" class="nav-link"> Topic Map </a>
 
-          <button class="nav-link" type="button" data-view="topics">
-             Topic Map
-          </button>
+          <a href="challenges.html" class="nav-link"> Challenges </a>
 
-          <button class="nav-link" type="button" data-view="challenges">
-             Challenges
-          </button>
+          <a href="rewards.html" class="nav-link"> Rewards </a>
 
-          <button class="nav-link" type="button" data-view="rewards">
-            Rewards
-          </button>
-
-          <button class="nav-link" type="button" data-view="performance">
-             Performance
-          </button>
+          <a href="performance.html" class="nav-link"> Performance </a>
 
           <p class="nav-heading">PREFERENCES</p>
 
-          <button class="nav-link" type="button" data-view="settings">
-             Settings
-          </button>
+          <a href="settings.html" class="nav-link"> Settings </a>
         </nav>
 
         <div class="sidebar-footer">
@@ -77,22 +64,35 @@
             <p>Your learning journey starts here.</p>
           </div>
 
-          
-<div class="user-profile">
+          <div class="user-profile">
+            <button
+              class="notification-icon"
+              type="button"
+              aria-label="Notifications"
+            >
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M18 9A6 6 0 0 0 6 9C6 16 3 16 3 18H21C21 16 18 16 18 9Z"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 21H14"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <span class="notification-dot"></span>
+            </button>
 
-    <button class="notification-icon" type="button"
-            aria-label="Notifications">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M18 9A6 6 0 0 0 6 9C6 16 3 16 3 18H21C21 16 18 16 18 9Z"
-            stroke="currentColor" stroke-width="1.7"
-            stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M10 21H14" stroke="currentColor"
-            stroke-width="1.7" stroke-linecap="round"/>
-        </svg>
-        <span class="notification-dot"></span>
-    </button>
-
-    <div class="user-avatar" role="img" aria-label="Questling profile avatar">
+            <div
+              class="user-avatar"
+              role="img"
+              aria-label="Questling profile avatar"
+            >
               <svg
                 viewBox="0 0 100 100"
                 role="img"
@@ -116,16 +116,13 @@
 
                 <ellipse cx="50" cy="91" rx="23" ry="8" fill="#765DB1" />
               </svg>
-            
-    </div>
+            </div>
 
-    <div class="user-details">
-        <h3>Kashimana Nor</h3>
-        <span>Computer Science</span>
-    </div>
-
-</div>
-
+            <div class="user-details">
+              <h3>Kashimana Nor</h3>
+              <span>Computer Science</span>
+            </div>
+          </div>
         </header>
 
         <!-- DASHBOARD VIEW -->
@@ -261,7 +258,6 @@
             </div>
 
             <article class="learning-card">
-
               <div class="learning-details">
                 <span class="category-label">COMPUTER SCIENCE</span>
 
@@ -362,8 +358,6 @@
             </div>
           </section>
         </section>
-
-        
 
         <!-- CHALLENGES VIEW -->
         <section class="page-section" id="challenges" hidden>
